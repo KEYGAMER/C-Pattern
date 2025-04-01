@@ -11,7 +11,7 @@ Hi! I’m Anirban Dey, a passionate programmer and open-source enthusiast. I cre
 
 🔗 Connect with me:
 1. GitHub
-2. LinkedIn (Replace with your LinkedIn link)
+2. LinkedIn www.linkedin.com/in/anirban-dey-654060224
 
 ✨ Project Features
 
