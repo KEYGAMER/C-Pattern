@@ -180,8 +180,9 @@ int main() { int n;
 }
 
 
-// For more cleaner code you can use this code to print a triangular pattern with only 0 and 1 in a special order like below :#include <stdio.h>
+// For more cleaner code you can use this code to print a triangular pattern with only 0 and 1 in a special order like below :
 
+#include <stdio.h>
 int main() { int n;
     for (int i = 1; i <= n; i++) { //n is the number of rows you want to print
         for (int j = 1; j <= i; j++) {
