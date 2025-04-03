@@ -53,8 +53,8 @@ int main() {
     if(n%2==0) {printf("Enter a odd number !!\n");
     }else{ for(int i=1; i<=n; i++) {
         for(int j=1; j<=n; j++){
-            for(int k=1,m=n; k<=n,m>=1; k++,m--) {
-           if(i==k&&j==k||i==m&&j==k) printf("*");
+            for(int k=1, m=n ; k<=n, m>=1 ; k++, m--) {
+           if(i==j||i==m&&j==k) printf("*");
            else printf(" "); }
         }
         
@@ -84,6 +84,58 @@ int main() {
             }
             printf("\n");
         }
+    }
+    return 0;
+}
+
+
+
+
+// This is a code of a triangualr pattern with umbers that is non repeated !! ( Without using INT_MAX)
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the number of rows you want: ");
+    scanf("%d", &n);
+    int a=1;
+
+   for(int i=1; i<=n; i++){
+       for(int j=1; j<=i; j++){
+           printf("%d ", a);
+           a++;
+       }
+       printf("\n");
+   }
+    return 0;
+}
+// This is a code of a triangualr pattern with umbers that is non repeated !! ( With using INT_MAX)
+
+#include <stdio.h>
+#include <limits.h> // Using this library for INT_MAX check
+
+int main() {
+    int n;
+    printf("Enter the number of rows for the number triangle: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Error: Please enter a positive integer.\n");
+        return 1; // Exiting with a general error if the input is not a positive integer
+    }
+
+    int a = 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", a);
+            if (a == INT_MAX) { // Preventing (overflow) Which means that the number is too large to be stored in an int variable
+                printf("\nWarning: Number overflow!\n");
+                return 1;
+            }
+            a++;
+        }
+        printf("\n");
     }
     return 0;
 }
