@@ -139,3 +139,55 @@ int main() {
     }
     return 0;
 }
+
+/*to print a triangular pattern with only 0 and 1 in a special order like below :
+Brute force approach 
+1
+01
+101
+0101
+10101 
+.........
+*/
+#include <stdio.h>
+
+int main() {
+    int a,n;
+    for(int i=1; i<=n; i++) { //n is the number of rows you want to print
+      if(i%2==0) a=0;
+      else a=1;
+      for(int j=1; j<=i; j++) {
+          printf("%d",a);
+          if(a==0) a=1;
+          else a=0;
+      }
+      printf("\n");
+    }
+    return 0;
+}
+// or you can use a more mathematical approach to print a triangular pattern with only 0 and 1 in a special order like below :
+
+#include <stdio.h>
+int main() { int n;
+    for(int i=1; i<=n; i++) {    //n is the number of rows you want to print
+      for(int j=1; j<=i; j++) {
+          if((i+j)%2==0) printf("1");
+          else printf("0");
+        }
+      printf("\n");
+    }
+    return 0;
+}
+
+
+// For more cleaner code you can use this code to print a triangular pattern with only 0 and 1 in a special order like below :#include <stdio.h>
+
+int main() { int n;
+    for (int i = 1; i <= n; i++) { //n is the number of rows you want to print
+        for (int j = 1; j <= i; j++) {
+            printf("%d", (i + j) % 2 == 0);
+        }
+        printf("\n");
+    }
+    return 0;
+}
