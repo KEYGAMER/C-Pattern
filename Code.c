@@ -41,3 +41,25 @@ int main() {
     
     return 0;
 }
+
+
+//for printing a cross in the output terminal 
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the number of rows you want in the cross: ");
+    scanf("%d", &n);
+    if(n%2==0) {printf("Enter a odd number !!\n");
+    }else{ for(int i=1; i<=n; i++) {
+        for(int j=1; j<=n; j++){
+            for(int k=1,m=n; k<=n,m>=1; k++,m--) {
+           if(i==k&&j==k||i==m&&j==k) printf("*");
+           else printf(" "); }
+        }
+        
+        printf("\n");
+    }
+}
+    return 0;
+}
